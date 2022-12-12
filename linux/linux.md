@@ -47,9 +47,11 @@ This means it shows the location of where this cat (basically an instruction fil
 
  Directory Shortcuts:
 
+```
  '.'  Refers to the current directory.
  '..' Refers to the parent directory.
  'cd' Refers to the changing directory.
+```
   
 
 
