@@ -66,3 +66,16 @@ rmdir <directory name> This removes the directory if is clean
 rm -rf <directory name> This removes directory either empty or 
 ```
 
+## File and Directory Permissions
+
+On doing ls we can see a long listing format for the files and directories. 
+
+Running 'ls -l'
+
+```
+drwxr-xr-x  4 syedimam  staff  128 12 Dec 11:36 linux
+```
+ Looking at the permissions section we can see what type of file is it. 
+ - '-' means regular file.
+ - 'd' means directory.
+ - 'l' means symbolic link. 
