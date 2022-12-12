@@ -79,3 +79,38 @@ drwxr-xr-x  4 syedimam  staff  128 12 Dec 11:36 linux
  - '-' means regular file.
  - 'd' means directory.
  - 'l' means symbolic link. 
+
+ For our case, we can see that it is a directory. Other characters means 
+ - 'r' for read. 
+ - 'w' for write.
+ - 'x' for execute.
+
+### Permission Categories. 
+
+Here are symbols for representing each category in permissions:
+
+- 'u' means user
+- 'g' means group
+- 'o' means other
+- 'a' means all
+
+### Groups
+
+- Every user is in at least part of one group
+- Users can belong to many groups
+- Groups are used to organize users
+- The *groups* command is used to display a user's groups.
+- You can also use *id -Gn*
+- New files belong to your primary group 
+- The *chgrp* command changes the group, Using *chgrp <new group name> <file name>
+### Numeric Based Permissions
+
+Numbers 0s and 1s can be used for setting persmissions. 
+- 0 --> Value for off
+- 1 --> Value for on
+
+In permissions order has meaning. Permissions are always in read, write and execute order.\
+
+The file creation mask determines the default permissions. If no masks used permissions would be 777 for directories or 666 for files./
+
+*umask* sets the file creation mask to mode. That is, the command is used to set default permissions for files and directories the user creates. umask basically takes away the permission. 
