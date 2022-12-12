@@ -52,6 +52,17 @@ This means it shows the location of where this cat (basically an instruction fil
  '..' Refers to the parent directory.
  'cd' Refers to the changing directory.
 ```
-  
 
+Make directories using:
+
+```
+mkdir <directory name> 
+```
+
+Remove directories using 
+```
+rmdir <directory name> This removes the directory if is clean
+
+rm -rf <directory name> This removes directory either empty or 
+```
 
