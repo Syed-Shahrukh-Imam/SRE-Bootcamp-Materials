@@ -9,6 +9,11 @@ Man pages are used to provide a detailed description of the linux command. The s
 ```
 man <linux-command>
 ```
+Man pages can be searched using:
+```
+man -k SEARCH_TERM
+```
+
 
 ## Environment Variables.
 
@@ -35,3 +40,16 @@ Should output:
 This means it shows the location of where this cat (basically an instruction file that tells the shell to do the cat).
 
 **Fun Fact :** 'tac' command is the reverse of 'cat'. So tac is used to output the file in the reverse order.
+
+ ## Working with Directories.
+
+ Directories are containers for other files and directories. They provide a tree like structure. They can be accessed ny name or shortbut. 
+
+ Directory Shortcuts:
+
+ '.'  Refers to the current directory.
+ '..' Refers to the parent directory.
+ 'cd' Refers to the changing directory.
+  
+
+
