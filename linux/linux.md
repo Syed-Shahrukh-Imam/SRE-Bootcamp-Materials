@@ -114,3 +114,45 @@ In permissions order has meaning. Permissions are always in read, write and exec
 The file creation mask determines the default permissions. If no masks used permissions would be 777 for directories or 666 for files./
 
 *umask* sets the file creation mask to mode. That is, the command is used to set default permissions for files and directories the user creates. umask basically takes away the permission. 
+
+## Displaying contents of Files
+
+These commands prove to be very useful.
+
+```
+cat file - Displays the contents of a file
+more file - Browse through a text file.
+less file - More features than more.
+head file - Output the beginning or the top portion of the file.
+tail file - Output the ending portion of the file. 
+```
+
+The following command will allow you to follow a file that is being updated. This can be important when displaying or working with log files. 
+
+```
+tail -f <file name>
+```
+
+## Finding files and directories. 
+
+The command to do this is *find*. This recursively finds files in path that match expression. If no arguments are supplied it finds all the files in the current directory struture. The syntax is shown below: 
+
+```
+find [path] [expression]
+```
+
+The find command has some very useful features. 
+
+```
+-name pattern : find files and directories that match the pattern. 
+-iname pattern: it is like -name, but ignores case. 
+-ls : performs an ls of each found items.
+
+
+-mtime days: Find files that are days old.
+-size num: Finds file that are of size num
+-newer file: Finds file that are newer than file.
+-exec command {} \; : run command against all files that are found. 
+```
+
+Another helpful command is 
