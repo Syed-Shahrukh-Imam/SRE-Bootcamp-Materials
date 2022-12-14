@@ -155,4 +155,34 @@ The find command has some very useful features.
 -exec command {} \; : run command against all files that are found. 
 ```
 
-Another helpful command is 
+Another helpful command is the locate command. The syntax for the command is as follows:
+
+ ```
+ locate pattern
+ ```
+ This command is used to:
+ - Lists files that match pattern
+ - Faster than the find command
+ - Queries an index
+ - Results are not real time.
+ - May not be enabled on all systems
+ - It is *faster* than the find command. This works using an index. Usually there is a lag between the index between updating and using the locate command.
+ 
+ ## Wildcards
+ 
+ A Wildcard is a character or string used for pattern matching. Globbing expands the wildcard pattern into a list of files and/or directories (paths). Wildcards can be used with most commands.
+ - ls
+ - rm
+ - cp
+ 
+ There are two types of wildcards: 
+ - * : matches zero or more characters.
+ - ? : matches exactly one characters. 
+ 
+ ### More Wildcards
+ [ ] - This is a character class\
+ - This matches any of the characters included between the brackets. Matches exactly one character. For eg,
+ ```
+ [aeiou] - This matches all the vowels. 
+ ```
+ - Moreover, we use [!] which matches any of the characters NOT included between the brackets. Matches exactly one character. 
