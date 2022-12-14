@@ -217,9 +217,9 @@ alias [name[=value]]
 ## Comparing Files.
     
 There are three ways to do this. 
-    - diff file1 file2 : Compare two files. 
-    - sdiff file1 file2 : Side by side comparision
-    - vimdiff file1 file2 : Highlight differences in vim
+- diff file1 file2 : Compare two files. 
+- sdiff file1 file2 : Side by side comparision
+- vimdiff file1 file2 : Highlight differences in vim
     
 ## Searching in Files and Using Pipes
 To look for text within a file we use the *grep* command. The typical syntax of using grep is shown below: 
@@ -231,3 +231,52 @@ grep pattern file
 - -c : Count the numnber of occurences in a file.
 - -n : Precede output with the line number. 
 - -v : Invert Match. Print the lines that do not match. 
+
+
+## Processes and Job Contronl
+
+To display the current process in the current session we run the *ps* option. The *ps* command has a few useful flags. 
+
+```
+-e : Everything, all processes.
+-f : Full format listing.
+-u username : Display the username's processes. 
+-p username : Display information for the PID
+
+```
+
+Other ways to view processes include: 
+
+- pstree
+- top
+- htop
+
+## Background and Foreground Processes
+
+``` 
+command & : This tells shell to start the *command* in the background.
+Crtl C : Kills the foreground process.
+Crtl Z : Suspends the foregorund process. 
+```
+
+## Scheduling Repeated Jobs with Cron
+
+- cron - is a time based job scheduling service.
+- crontab - a program to create, read, update and delete your job schedules. 
+- Use cron to schedule and automate tasks.
+
+### Crontab format
+
+```
+* * * * * command
+
+From the right ... 
+
+First Asterik : Day of the week (0-6)
+Second Asterik : Month of the year (1-12)
+Third Asterik : Day of the Month (1-31)
+Fourth Asterik : Hour (0-23)
+Fifth Asterik : Minute (0-59)
+
+```
+
