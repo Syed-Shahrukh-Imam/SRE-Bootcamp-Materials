@@ -180,9 +180,54 @@ Another helpful command is the locate command. The syntax for the command is as 
  - ? : matches exactly one characters. 
  
  ### More Wildcards
- [ ] - This is a character class\
+ [ ] - This is a character class
  - This matches any of the characters included between the brackets. Matches exactly one character. For eg,
  ```
  [aeiou] - This matches all the vowels. 
  ```
  - Moreover, we use [!] which matches any of the characters NOT included between the brackets. Matches exactly one character. 
+ 
+## I/O Redirection
+There are three different types of I/O.
+ 
+- Standard Input --> stdin --> 0
+- Standard Output --> stdout --> 1
+- Standard Error --> stderr --> 2
+
+The number represents file descriptors. These mean open files. It is easier for the machine to refernce these as numbers. 
+ 
+### Redirection
+```
+ > - Redirects standard output to a file. 
+ 
+ >> - Redirects standard output to a file. Appends to any existing contents.
+ 
+ < - Redirects input from a file to a command. 
+```
+    
+## Aliases
+Aliases can be thought of as a text expander. It allows for using shortcuts, useful when repeated use of long commands and useful for commands that we use often.
+    
+The syntax is:
+
+```
+alias [name[=value]]
+```
+
+## Comparing Files.
+    
+There are three ways to do this. 
+    - diff file1 file2 : Compare two files. 
+    - sdiff file1 file2 : Side by side comparision
+    - vimdiff file1 file2 : Highlight differences in vim
+    
+## Searching in Files and Using Pipes
+To look for text within a file we use the *grep* command. The typical syntax of using grep is shown below: 
+```
+grep pattern file
+```
+### *grep* Options
+- -i : Perform a search, ignoring the case. 
+- -c : Count the numnber of occurences in a file.
+- -n : Precede output with the line number. 
+- -v : Invert Match. Print the lines that do not match. 
