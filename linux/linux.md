@@ -279,4 +279,15 @@ Fourth Asterik : Hour (0-23)
 Fifth Asterik : Minute (0-59)
 
 ```
+## Crontab Commands
+
+```
+crontab file : Install a new crontab from file.
+crontab -l : List your cron jobs. 
+crontab -e : edit your cron jobs. 
+crontab -r : Remove all your cron jobs. 
+```
+
+The cron services runs scheduled jobs. 
+Use the crontab command to schedule jobs. 
 
