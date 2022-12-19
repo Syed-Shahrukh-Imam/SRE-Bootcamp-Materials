@@ -291,3 +291,11 @@ crontab -r : Remove all your cron jobs.
 The cron services runs scheduled jobs. 
 Use the crontab command to schedule jobs. 
 
+## Piping
+
+```
+Command A | xargs Command B
+```
+
+In the scenario above, it is assumed that the command B does not accept any standard input. So the xargs command turns the standard output from the command A to be used as *command line arguments* for 
+command B.
