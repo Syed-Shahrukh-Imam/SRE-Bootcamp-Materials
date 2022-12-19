@@ -155,4 +155,147 @@ The find command has some very useful features.
 -exec command {} \; : run command against all files that are found. 
 ```
 
-Another helpful command is 
+Another helpful command is the locate command. The syntax for the command is as follows:
+
+ ```
+ locate pattern
+ ```
+ This command is used to:
+ - Lists files that match pattern
+ - Faster than the find command
+ - Queries an index
+ - Results are not real time.
+ - May not be enabled on all systems
+ - It is *faster* than the find command. This works using an index. Usually there is a lag between the index between updating and using the locate command.
+ 
+ ## Wildcards
+ 
+ A Wildcard is a character or string used for pattern matching. Globbing expands the wildcard pattern into a list of files and/or directories (paths). Wildcards can be used with most commands.
+ - ls
+ - rm
+ - cp
+ 
+ There are two types of wildcards: 
+ - * : matches zero or more characters.
+ - ? : matches exactly one characters. 
+ 
+ ### More Wildcards
+ [ ] - This is a character class
+ - This matches any of the characters included between the brackets. Matches exactly one character. For eg,
+ ```
+ [aeiou] - This matches all the vowels. 
+ ```
+ - Moreover, we use [!] which matches any of the characters NOT included between the brackets. Matches exactly one character. 
+ 
+## I/O Redirection
+There are three different types of I/O.
+ 
+- Standard Input --> stdin --> 0
+- Standard Output --> stdout --> 1
+- Standard Error --> stderr --> 2
+
+The number represents file descriptors. These mean open files. It is easier for the machine to refernce these as numbers. 
+ 
+### Redirection
+```
+ > - Redirects standard output to a file. 
+ 
+ >> - Redirects standard output to a file. Appends to any existing contents.
+ 
+ < - Redirects input from a file to a command. 
+```
+    
+## Aliases
+Aliases can be thought of as a text expander. It allows for using shortcuts, useful when repeated use of long commands and useful for commands that we use often.
+    
+The syntax is:
+
+```
+alias [name[=value]]
+```
+
+## Comparing Files.
+    
+There are three ways to do this. 
+- diff file1 file2 : Compare two files. 
+- sdiff file1 file2 : Side by side comparision
+- vimdiff file1 file2 : Highlight differences in vim
+    
+## Searching in Files and Using Pipes
+To look for text within a file we use the *grep* command. The typical syntax of using grep is shown below: 
+```
+grep pattern file
+```
+### *grep* Options
+- -i : Perform a search, ignoring the case. 
+- -c : Count the numnber of occurences in a file.
+- -n : Precede output with the line number. 
+- -v : Invert Match. Print the lines that do not match. 
+
+
+## Processes and Job Contronl
+
+To display the current process in the current session we run the *ps* option. The *ps* command has a few useful flags. 
+
+```
+-e : Everything, all processes.
+-f : Full format listing.
+-u username : Display the username's processes. 
+-p username : Display information for the PID
+
+```
+
+Other ways to view processes include: 
+
+- pstree
+- top
+- htop
+
+## Background and Foreground Processes
+
+``` 
+command & : This tells shell to start the *command* in the background.
+Crtl C : Kills the foreground process.
+Crtl Z : Suspends the foregorund process. 
+```
+
+## Scheduling Repeated Jobs with Cron
+
+- cron - is a time based job scheduling service.
+- crontab - a program to create, read, update and delete your job schedules. 
+- Use cron to schedule and automate tasks.
+
+### Crontab format
+
+```
+* * * * * command
+
+From the right ... 
+
+First Asterik : Day of the week (0-6)
+Second Asterik : Month of the year (1-12)
+Third Asterik : Day of the Month (1-31)
+Fourth Asterik : Hour (0-23)
+Fifth Asterik : Minute (0-59)
+
+```
+## Crontab Commands
+
+```
+crontab file : Install a new crontab from file.
+crontab -l : List your cron jobs. 
+crontab -e : edit your cron jobs. 
+crontab -r : Remove all your cron jobs. 
+```
+
+The cron services runs scheduled jobs. 
+Use the crontab command to schedule jobs. 
+
+## Piping
+
+```
+Command A | xargs Command B
+```
+
+In the scenario above, it is assumed that the command B does not accept any standard input. So the xargs command turns the standard output from the command A to be used as *command line arguments* for 
+command B.
